@@ -49,7 +49,7 @@ abstract class MapOperations
     GeoCoord latLng, {
     bool animated = true,
     bool waitUntilReady = true,
-    double zoom,
+    double? zoom,
   });
 
   /// Sets new camera zoom.
@@ -68,7 +68,7 @@ abstract class MapOperations
   });
 
   /// Gets center coordinates of the map.
-  FutureOr<GeoCoord> get center;
+  FutureOr<GeoCoord>? get center;
 
   /// Sets the styling of the base map.
   ///
@@ -121,12 +121,12 @@ abstract class MapMarkers {
   /// If marker with same [position] have been already added, addition of a new marker will be ignored.
   void addMarkerRaw(
     GeoCoord position, {
-    String label,
-    String icon,
-    String info,
-    String infoSnippet,
-    ValueChanged<String> onTap,
-    VoidCallback onInfoWindowTap,
+    String? label,
+    String? icon,
+    String? info,
+    String? infoSnippet,
+    ValueChanged<String>? onTap,
+    VoidCallback? onInfoWindowTap,
   });
 
   /// Adds a marker to the map by given [position].
@@ -155,12 +155,12 @@ abstract class MapDirections {
   void addDirection(
     dynamic origin,
     dynamic destination, {
-    String startLabel,
-    String startIcon,
-    String startInfo,
-    String endLabel,
-    String endIcon,
-    String endInfo,
+    String? startLabel,
+    String? startIcon,
+    String? startInfo,
+    String? endLabel,
+    String? endIcon,
+    String? endInfo,
   });
 
   /// Removes a direction from the map by given [origin] and [destination] coordinates.
@@ -185,7 +185,7 @@ abstract class MapPolygons {
   void addPolygon(
     String id,
     Iterable<GeoCoord> points, {
-    ValueChanged<String> onTap,
+    ValueChanged<String>? onTap,
     Color strokeColor = const Color(0x000000),
     double strokeOpacity = 0.8,
     double strokeWidth = 1,
@@ -201,7 +201,7 @@ abstract class MapPolygons {
   void editPolygon(
     String id,
     Iterable<GeoCoord> points, {
-    ValueChanged<String> onTap,
+    ValueChanged<String>? onTap,
     Color strokeColor = const Color(0x000000),
     double strokeOpacity = 0.8,
     double strokeWeight = 1,
@@ -227,7 +227,7 @@ abstract class MapCircles {
     String id,
     GeoCoord center,
     double radius, {
-    ValueChanged<String> onTap,
+    ValueChanged<String>? onTap,
     Color strokeColor = const Color(0x000000),
     double strokeOpacity = 0.8,
     double strokeWidth = 1,
@@ -244,7 +244,7 @@ abstract class MapCircles {
     String id,
     GeoCoord center,
     double radius, {
-    ValueChanged<String> onTap,
+    ValueChanged<String>? onTap,
     Color strokeColor = const Color(0x000000),
     double strokeOpacity = 0.8,
     double strokeWidth = 1,

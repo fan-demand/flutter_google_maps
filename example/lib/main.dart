@@ -7,7 +7,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_google_maps/flutter_google_maps.dart';
 
 void main() {
-  GoogleMap.init('API_KEY');
+ GoogleMap.init('193920585665-60c5rhhb841ec21dng0keqodqt67t84o.apps.googleusercontent.com');
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }

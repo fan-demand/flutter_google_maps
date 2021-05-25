@@ -145,6 +145,7 @@ class WebMapPreferences {
   })  : dragGestures = true,
         scrollwheel = true;
 
+  
   /// Predefined support for map that will be scrolled.
   ///
   /// Scrollwheel zomming and dragging gestures are disabled.
